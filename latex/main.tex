@@ -1,0 +1,196 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IDCORE Annual Review Report --- Master Document
+%
+% Usage:
+%   Select the desired review year in the documentclass options:
+%     \documentclass[year1]{idcore-ar}   % Year 1: Project Plan Review
+%     \documentclass[year2]{idcore-ar}   % Year 2: Annual Progress Review
+%     \documentclass[year3]{idcore-ar}   % Year 3: Annual Progress Review & Thesis Plan
+%
+%   To suppress the guidance callout boxes in your final PDF:
+%     \documentclass[year1, hideguidance]{idcore-ar}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[year1]{idcore-ar}
+
+% -----------------------------------------------------------------------------
+% Report & Student Metadata
+% -----------------------------------------------------------------------------
+\author{Jane Doe}
+\studentnumber{s1234567}
+\projecttitle{Next-Generation Floating Offshore Wind Turbine Dynamics in Complex Wave Climates}
+
+% Supervisory Team (3 academic partner supervisors + 1 independent reviewer)
+\leadsupervisor{Prof. David Ingram (University of Edinburgh)}
+\cosupervisorone{Prof. Julia Race (University of Strathclyde)}
+\cosupervisortwo{Dr. Philipp Thies (University of Exeter)}
+\independentreviewer{Prof. Ian Masters (Swansea University)}
+
+% Industrial Sponsor
+\industrialsupervisor{Dr. Robert Miller}
+\company{Renewable Dynamics Ltd}
+
+% Path to IDCORE Logo
+\logopath{../assets/idcore_logo.png}
+
+% Year 1 Specific: Research Ethics & Integrity Assessment
+\ethicsrequired{No}   % Set to 'Yes' or 'No'
+\ethicsattached{No}   % Set to 'Yes' or 'No'
+
+% Document Control (Add multiple revision lines using \addrevision{version}{date}{amendment})
+% To start fresh, call \clearrevisions before adding your revisions.
+\clearrevisions
+\addrevision{1.0}{15/07/2026}{Sent to supervisors for review}
+\addrevision{2.0}{20/08/2026}{Updated following review discussion}
+
+% Signatures & Approvals
+\studentsignature{J. Doe}
+\signaturedate{\today}
+\industrialsupervisorsignature{R. Miller}
+\industrialsupervisordate{\today}
+\horiname{Prof Alasdair McDonald}
+\horisignature{A. McDonald}
+\horidate{\today}
+
+% -----------------------------------------------------------------------------
+% Document Content
+% -----------------------------------------------------------------------------
+\begin{document}
+
+% Renders the appropriate official cover page based on the year option
+\makecoverpage
+
+% =============================================================================
+% 1. Literature Review
+% =============================================================================
+\section{Literature Review}
+
+\begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
+\textbf{Purpose:} Critical review of current literature and state of the art.\\
+\begin{itemize}\setlength{\itemsep}{1pt}
+  \item Write for a technical, but non-specialist reader.
+  \item Establish where current knowledge ends and where your research question begins.
+  \item Maintain consistent Harvard referencing throughout (e.g., \citet{smith2024tidal}).
+\end{itemize}
+\end{guidance}
+
+[Enter your Literature Review here. Maintain maximum 3 pages.]
+
+
+% =============================================================================
+% 2. Project Plan
+% =============================================================================
+\section{Project Plan}
+
+\begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
+\textbf{Purpose:} Define your research strategy for the remaining 3 years of the EngD.\\
+Address:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+  \item What do you plan to do and why? (Aims, novelty, deliverables).
+  \item How will you achieve this? (Measurable objectives and stages).
+  \item What resources are required? (Facilities, HPC, data sets, consumables).
+  \item Risks to successful completion and mitigation plans.
+\end{enumerate}
+\end{guidance}
+
+\subsection{Contribution to Knowledge and Project Aims}
+[State your anticipated novelty, industrial impact, tangible deliverables, and primary Aims.]
+
+\subsection{Methodology and Measurable Objectives}
+[Detail the project stages and provide a bulleted list of measurable, verifiable objectives.]
+
+\subsection{Required Resources and Collaborations}
+[List required experimental facilities, computing clusters, software licences, and sponsor data access.]
+
+\subsection{Risks to Successful Completion}
+[Analyse potential obstacles, external dependencies, and mitigation strategies.]
+
+
+% =============================================================================
+% 3. References
+% =============================================================================
+\newpage
+\section{References}
+
+\begin{guidance}[Page Limit: 1 page only]
+All IDCORE students must use the \textbf{Harvard Referencing Style} (author-date format).
+\end{guidance}
+
+\bibliographystyle{abbrvnat}
+\bibliography{references}
+
+
+% =============================================================================
+% 4. Gantt Chart & Work Plan
+% =============================================================================
+\newpage
+\section{Gantt Chart \& Diagrammatic Work Plan}
+
+\begin{guidance}[Page Limit: 1 page only]
+Include a diagrammatic work plan (Gantt chart) on this dedicated page:
+\begin{itemize}\setlength{\itemsep}{1pt}
+  \item Show Year 1 / upcoming 12 months in reasonable detail.
+  \item \textbf{Mandatory Requirement:} Your plans must include an explicit allocation of time for writing up your thesis/portfolio --- \textbf{ideally at least 6 months}.
+\end{itemize}
+\end{guidance}
+
+\begin{center}
+  \vspace{1cm}
+  \fbox{\parbox[c][12cm][c]{0.9\linewidth}{\centering\large\color{idcoregray}\textbf{[Insert 1-Page Gantt Chart Here]}\\
+  \vspace{4mm}
+  \small Must include Year 1 detail and at least 6 months reserved for thesis write-up.}}
+\end{center}
+
+
+% =============================================================================
+% 5. Project Risk Assessment
+% =============================================================================
+\newpage
+\section{Project Risk Assessment}
+
+\begin{guidance}[Requirement: 5 key project risks]
+Identify and evaluate the \textbf{5 key risks} to successfully completing your research project within the prescribed 3-year research window.
+\end{guidance}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}p{4cm}|c|c|>{\raggedright\arraybackslash}X|}
+  \hline
+  \rowcolor{idcorelight}
+  \textbf{\#} & \textbf{Risk Description} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Mitigation Strategy} \\ \hline
+  1 & Delay in test tank booking / availability & Medium & High & Engage facility managers early; secure backup slots; begin with numerical modelling. \\ \hline
+  2 & Sponsor proprietary sensor data delay & Medium & Medium & Establish fallback data agreements; use public/synthetic benchmarking datasets. \\ \hline
+  3 & Numerical simulation solver convergence issues & Low & Medium & Validate against published empirical benchmarks; seek academic specialist input. \\ \hline
+  4 & High-performance computing queue bottlenecks & Low & Low & Optimise code locally; utilise partner clusters (e.g., HPC-Wales / Cirrus). \\ \hline
+  5 & Unforeseen scope expansion by industrial sponsor & Medium & High & Maintain fortnightly supervisory reviews; enforce supervision agreement scope. \\ \hline
+\end{tabularx}
+\caption{Key Project Risks and Mitigation Plans.}
+\end{table}
+
+
+% =============================================================================
+% 6. Health \& Safety Assessment
+% =============================================================================
+\section{Health \& Safety Assessment}
+
+\begin{guidance}[Length: Not restricted in length]
+Detail all relevant Health \& Safety considerations for your project: laboratory safety, testing protocols, and company workplace risk assessments.
+\end{guidance}
+
+[Detail your project's Health \& Safety assessment here.]
+
+
+% =============================================================================
+% 7. Responsible Research and Innovation (RRI) Report
+% =============================================================================
+\section{Responsible Research and Innovation (RRI) Report}
+
+\begin{guidance}[Length: Not restricted in length]
+The RRI report reflects on the broader societal, environmental, ethical, and economic implications of your research using the AREA framework (Anticipate, Reflect, Engage, Act).
+\end{guidance}
+
+[Detail your RRI reflection and assessment here.]
+
+\end{document}
