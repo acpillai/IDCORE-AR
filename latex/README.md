@@ -15,9 +15,9 @@ latex/
 ├── main.tex                     # Universal master document
 ├── references.bib               # Sample Harvard-format bibliography
 ├── templates/
-│   ├── annual_review_year1.tex  # Complete Year 1 template (Project Planning)
-│   ├── annual_review_year2.tex  # Complete Year 2 template (Progress Review + IP Security)
-│   └── annual_review_year3.tex  # Complete Year 3 template (Progress Review + Draft Thesis Plan)
+│   ├── annual_review_year1.tex  # Complete Year 1 template (Project Planning & TR&I Data Management)
+│   ├── annual_review_year2.tex  # Complete Year 2 template (Progress Review, UK Net Zero, TR&I Assessment)
+│   └── annual_review_year3.tex  # Complete Year 3 template (Progress Review, Draft Thesis Plan, TR&I Archival)
 └── README.md
 ```
 
@@ -103,12 +103,12 @@ pdflatex annual_review_year1.tex
 | :--- | :--- | :--- | :--- |
 | **Cover Sheet** | Dual sign-off (Industry + HoRI) + Ethics check | Industrial Supervisor approval | Industrial Supervisor approval |
 | **Literature Review** | 3 pages max | Updated (3 pages max) | Updated (3 pages max) |
-| **Progress Summary** | *N/A* | 3 pages max | 3 pages max |
+| **Progress Summary** | *N/A (Start of project)* | 3 pages max | 3 pages max |
 | **Project Plan** | 3 pages max (Aims, Objectives, Resources, Risks) | Updated (3 pages max, focus on next year) | Updated with **Draft Thesis Plan** (3 pages max) |
-| **Impact Summary** | *N/A* | 1 page (*Scotland Beyond Net Zero*) | 1 page |
+| **Impact Summary** | *N/A* | 1 page (**Contribution to UK Net Zero & Industry**) | 1 page (**Contribution to UK Net Zero & Industry**) |
 | **References** | 1 page (Harvard style) | 1 page (Harvard style) | 1 page (Harvard style) |
 | **Gantt Chart** | 1 page (Year 1 detail, $\ge 6$ mos write-up) | 1 page ($\ge 6$ mos write-up) | 1 page (path to viva, $\ge 6$ mos write-up) |
 | **Risk Assessment** | 5 key risks | Updated risks | Updated risks |
 | **Health & Safety** | Not restricted in length | Updated | Updated |
-| **RRI / Ethics** | Full RRI report (+ Ethics form if needed) | *Replaced by IP Security* | Updated RRI/Ethics (from Year 1) |
-| **Data / IP Security** | *N/A* | 1 page (*Trusted Research* protocols) | **Explicitly NOT required** |
+| **RRI / Ethics** | Full RRI report (+ Ethics form if needed) | *Addressed in Y1 & Y3; TR&I focus in Y2* | Updated RRI/Ethics (from Year 1) |
+| **TR&I / Data Plan** | **TR&I & Data Management Plan** *(DMP, storage, backups, baseline IP)* | **TR&I & Data Security Assessment** *(1 page: Sponsor IP, hostile actors, conferences)* | **TR&I, Data Security & Archiving Plan** *(Thesis embargo/redaction, sponsor handover, archiving)* |

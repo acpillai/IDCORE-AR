@@ -9,17 +9,17 @@ This folder provides ready-to-use Microsoft Word (`.docx`) templates for IDCORE 
 1. **`IDCORE_Annual_Review_Year_1.docx`**
    - **Report Title:** *IDCORE Project Plan Review* (10 research credits).
    - **Cover Page:** Official Year 1 layout with embedded IDCORE logo, metadata table, Research Ethics & Integrity assessment (with School link), Document Control table, Student Signature, and Dual Confirmation block (Industrial Supervisor + Head of Research Institute: Prof Alasdair McDonald).
-   - **Built-in Sections:** Literature Review (3 pages max), Project Plan (3 pages max: Aims, Objectives, Resources, Risks), References (1 page max), Gantt Chart (1 page max, $\ge 6$ months write-up), Project Risk Assessment (5 key risks table), Health & Safety Assessment, and RRI Report.
+   - **Built-in Sections:** Literature Review (3 pages max), Project Plan (3 pages max: Aims aligned with UK Net Zero, Objectives, Resources, Risks), References (1 page max), Gantt Chart (1 page max, $\ge 6$ months write-up), Project Risk Assessment (5 key risks table), Health & Safety Assessment, RRI Report, and **Trusted Research & Innovation (TR&I) and Data Management Plan** (DMP, storage architecture, sponsor IP baseline).
 
 2. **`IDCORE_Annual_Review_Year_2.docx`**
    - **Report Title:** *IDCORE Annual Progress Review* (10 research credits).
    - **Cover Page:** Official Years 2 & 3 layout with embedded IDCORE logo, metadata table, Document Control table, Author Signature, and Industrial Supervisor approval.
-   - **Built-in Sections:** Updated Literature Review (3 pages max), Summary of Progress to Date (3 pages max), Updated Project Plan (3 pages max), Impact Summary (1 page max, *Scotland Beyond Net Zero*), References (1 page max), Updated Gantt Chart (1 page max, $\ge 6$ months write-up), Updated Risk & H&S Assessments, and **Data / IP Security Assessment** (1 page, *Trusted Research* protocols).
+   - **Built-in Sections:** Updated Literature Review (3 pages max), Summary of Progress to Date (3 pages max), Updated Project Plan (3 pages max), **Impact Summary: Contribution to UK Net Zero & Industry** (1 page max), References (1 page max), Updated Gantt Chart (1 page max, $\ge 6$ months write-up), Updated Risk & H&S Assessments, and **Trusted Research & Innovation (TR&I) and Data Security Assessment** (1 page, *Trusted Research* protocols, sponsor IP, anti-leak/theft, international conferences).
 
 3. **`IDCORE_Annual_Review_Year_3.docx`**
    - **Report Title:** *IDCORE Annual Progress Review* (10 research credits).
    - **Cover Page:** Official Years 2 & 3 layout with embedded IDCORE logo, metadata table, Document Control, Author Signature, and Industrial Supervisor approval.
-   - **Built-in Sections:** Updated Literature Review (3 pages max), Summary of Progress to Date (3 pages max), Updated Project Plan & **Draft Thesis Plan** (3 pages max: chapter outline, monograph vs portfolio, review workflow, confidentiality/embargo), Impact Summary (1 page max), References (1 page max), Updated Gantt Chart (1 page max), Updated Risk & H&S Assessments, Updated RRI / Ethics Assessment. *(Note: Data/IP Security is explicitly excluded per IDCORE guidance).*
+   - **Built-in Sections:** Updated Literature Review (3 pages max), Summary of Progress to Date (3 pages max), Updated Project Plan & **Draft Thesis Plan** (3 pages max: chapter outline, monograph vs portfolio, review workflow, confidentiality/embargo), **Impact Summary: Contribution to UK Net Zero & Industry** (1 page max), References (1 page max), Updated Gantt Chart (1 page max), Updated Risk & H&S Assessments, Updated RRI / Ethics Assessment, and **Trusted Research & Innovation (TR&I), Data Security & Archiving Plan** (thesis redactions/embargo, sponsor sign-off, data handover, and archiving).
 
 ---
 
