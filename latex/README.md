@@ -51,14 +51,32 @@ To append another version (e.g., version 2.1 or 3.0), simply add another line:
 \addrevision{2.1}{28/08/2026}{Minor corrections before final upload}
 ```
 
-### 4. Toggling the Built-in Guidance Callouts
-Each section comes with instructional callout boxes detailing page budgets and required prompts from the *IDCORE Supervision Best Practice Document*.
+### 4. Centralised Guidance Engine & Toggling Guidance
+Official guidance and regulations from the *IDCORE Supervision Best Practice Document* are centralised directly inside `idcore-ar.cls`. Templates call `\printguidance{<section-key>}` (or shorthand aliases), which automatically adapt the guidance text, requirements, and page budgets based on the chosen review year (`year1`, `year2`, or `year3`):
 
-When you are ready to produce your final, clean PDF for submission to EUCLID, you can suppress all guidance callouts with the `hideguidance` option:
+```latex
+\section{Updated Literature Review}
+\printguidance{literature-review}   % Automatically shows Y1, Y2, or Y3 guidance!
+```
+
+#### Available Guidance Keys and Shorthands:
+- `literature-review` (or `\guidancelitreview`)
+- `progress-summary` (or `\guidanceprogress`)
+- `project-plan` (or `\guidanceprojectplan`)
+- `impact-summary` (or `\guidanceimpact`)
+- `references` (or `\guidancereferences`)
+- `gantt-chart` (or `\guidancegantt`)
+- `risk-assessment` (or `\guidancerisks`)
+- `health-and-safety` (or `\guidancehs`)
+- `rri` (or `\guidancerri`)
+- `tri` (or `data-security`, `data-plan`, `\guidancetri`)
+
+When you are ready to produce your final, clean PDF for submission to EUCLID, you can suppress all guidance callout boxes globally with the `hideguidance` class option:
 
 ```latex
 \documentclass[year1, hideguidance]{idcore-ar}
 ```
+
 
 ---
 

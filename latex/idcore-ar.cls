@@ -202,6 +202,248 @@
 \newcommand{\hideguidance}{\@hideguidancetrue}
 
 % -----------------------------------------------------------------------------
+% Centralised Year-Aware Guidance Engine
+% -----------------------------------------------------------------------------
+\newcommand{\printguidance}[1]{%
+  \if@hideguidance\relax\else
+    \csname idcore@guidance@#1\endcsname
+  \fi
+}
+
+% 1. Literature Review
+\newcommand{\idcore@guidance@litreview}{%
+  \if@yearone
+    \begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
+      \textbf{Purpose:} Critical review of current literature and state of the art.\\
+      \textbf{Guidance Points:}
+      \begin{itemize}\setlength{\itemsep}{1pt}
+        \item Write for a technical, but non-specialist reader.
+        \item Establish where current knowledge ends and where your research question begins.
+        \item Synthesise existing academic and industrial methodologies, highlighting limitations and research gaps that your EngD project will address.
+        \item Maintain consistent Harvard referencing throughout (e.g., author-date format).
+      \end{itemize}
+    \end{guidance}
+  \else\if@yeartwo
+    \begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
+      \textbf{Purpose:} Update your literature review based on developments in the field and refinement of your research scope.\\
+      \textbf{Guidance Points:}
+      \begin{itemize}\setlength{\itemsep}{1pt}
+        \item Integrate new papers published over the past year.
+        \item Focus more specifically on the narrowed technical domain of your current experimental or numerical work.
+        \item Maintain consistent Harvard referencing throughout.
+      \end{itemize}
+    \end{guidance}
+  \else
+    \begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
+      \textbf{Purpose:} Final update of the research context and literature synthesis before thesis drafting.\\
+      \textbf{Guidance Points:}
+      \begin{itemize}\setlength{\itemsep}{1pt}
+        \item Present a mature critical synthesis of the state of the art.
+        \item Clearly position your project's novel contribution to knowledge within this literature.
+        \item Maintain consistent Harvard referencing throughout.
+      \end{itemize}
+    \end{guidance}
+  \fi\fi
+}
+\expandafter\def\csname idcore@guidance@literature-review\endcsname{\idcore@guidance@litreview}
+
+% 2. Progress Summary (Years 2 & 3)
+\newcommand{\idcore@guidance@progress}{%
+  \if@yeartwo
+    \begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
+      \textbf{Purpose:} Provide a detailed technical summary of what has been achieved during Year 2.\\
+      \textbf{Guidance Points:}
+      \begin{itemize}\setlength{\itemsep}{1pt}
+        \item Outline experimental campaigns conducted (facilities used, test setups, data collected).
+        \item Report on numerical simulation or analytical models created and validated.
+        \item Highlight conference presentations given (1 funded conference per year), draft papers, and industrial deliverables.
+        \item Discuss obstacles encountered and how they were overcome.
+      \end{itemize}
+    \end{guidance}
+  \else\if@yearthree
+    \begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
+      \textbf{Purpose:} Comprehensive summary of research achievements to date across Years 1--3.\\
+      \textbf{Guidance Points:}
+      \begin{itemize}\setlength{\itemsep}{1pt}
+        \item Detail completed experimental campaigns, data analysis, and numerical validations.
+        \item List outputs: conference presentations (mandatory to present in Years 2+), peer-reviewed publications, technical reports, and software/experimental artifacts delivered to the sponsor.
+        \item Summarise how the research questions defined in Year 1 have been answered.
+      \end{itemize}
+    \end{guidance}
+  \fi\fi
+}
+\expandafter\def\csname idcore@guidance@progress-summary\endcsname{\idcore@guidance@progress}
+
+% 3. Project Plan
+\newcommand{\idcore@guidance@projectplan}{%
+  \if@yearone
+    \begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
+      \textbf{Purpose:} Define your research strategy for the remaining 3 years of the EngD.\\
+      \textbf{Key Areas to Cover:}
+      \begin{enumerate}\setlength{\itemsep}{1pt}
+        \item \textbf{What do you plan to do and why?} Anticipated contribution to knowledge, novelty, deliverables (kit, code, or theory), alignment with UK Net Zero targets, and clear statement of overall Aims.
+        \item \textbf{How will you achieve this?} Specific stages and precise list of measurable objectives.
+        \item \textbf{What resources are required?} Lab facilities (e.g., FloWave, FastBlade), HPC access, equipment, data sets, software licences, travel funds, external partner reliance.
+        \item \textbf{Risks to successful completion:} Realistic evaluation of dependencies, unexpected experimental results, delays in data or materials, and mitigation alternatives.
+      \end{enumerate}
+    \end{guidance}
+  \else\if@yeartwo
+    \begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
+      \textbf{Purpose:} Detail the plan of future work, with primary focus on the upcoming year (Year 3).\\
+      \textbf{Guidance Points:}
+      \begin{itemize}\setlength{\itemsep}{1pt}
+        \item Set out concrete stages and measurable objectives for the next 12 months.
+        \item Detail remaining testing, computational simulations, or field trials required.
+        \item Confirm availability of required facilities and resources.
+      \end{itemize}
+    \end{guidance}
+  \else
+    \begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
+      \textbf{Purpose:} Plan the final phase of research and establish an agreed thesis structure and review roadmap.\\
+      \textbf{Key Requirements from IDCORE Guidance:}
+      \begin{itemize}\setlength{\itemsep}{1pt}
+        \item \textbf{Thesis Format:} An EngD thesis may follow a traditional monograph format or a \textbf{portfolio format} (covering more than one area of industrial investigation with a connecting philosophy).
+        \item \textbf{Narrative \& Chapters:} Outline the proposed chapter structure, estimated word counts, and completion timeline.
+        \item \textbf{Confidentiality \& Embargo:} Address how commercial data will be handled (non-dimensionalising variables, redacting sensitive sections, or requesting an embargo of up to 5 years).
+        \item \textbf{Supervisory Review Schedule:} Agree on a chapter-by-chapter review workflow with supervisors (allowing up to 3 weeks for critical review).
+        \item \textbf{Notice of Intention to Submit:} Diarise submission of NITS to Edinburgh College SharePoint approx.\ 2 months prior to thesis submission.
+      \end{itemize}
+    \end{guidance}
+  \fi\fi
+}
+\expandafter\def\csname idcore@guidance@project-plan\endcsname{\idcore@guidance@projectplan}
+
+% 4. Impact Summary
+\newcommand{\idcore@guidance@impact}{%
+  \begin{guidance}[Page Limit: 1 page only]
+    \textbf{Purpose:} Detail the industrial, academic, and societal impact of the research and progress towards UK Net Zero targets.\\
+    \textbf{Guidance Points:}
+    \begin{itemize}\setlength{\itemsep}{1pt}
+      \item Articulate commercial, technological, and environmental benefits to your sponsor company and the UK offshore renewable energy sector.
+      \item Quantify progress towards \textbf{UK Net Zero targets} (e.g., accelerated offshore wind/marine energy deployment, levelised cost of energy [LCOE] reduction, carbon abatement, grid integration, and supply chain competitiveness across the UK).
+      \item Impact assessment toolkits and research frameworks (e.g., UKRI Net Zero pathways, carbon accounting tools, and research impact toolkits) can be used to help quantify these contributions.
+    \end{itemize}
+  \end{guidance}
+}
+\expandafter\def\csname idcore@guidance@impact-summary\endcsname{\idcore@guidance@impact}
+
+% 5. References
+\newcommand{\idcore@guidance@references}{%
+  \begin{guidance}[Page Limit: 1 page only]
+    All IDCORE students must use the \textbf{Harvard Referencing Style} (author-date format).
+    Ensure consistent formatting throughout your written work all the way through to your final EngD thesis.
+  \end{guidance}
+}
+
+% 6. Gantt Chart
+\newcommand{\idcore@guidance@gantt}{%
+  \begin{guidance}[Page Limit: 1 page only]
+    \textbf{Requirements:}
+    \begin{itemize}\setlength{\itemsep}{1pt}
+      \item Show \if@yearthree final phase and roadmap to thesis submission and viva examination \else upcoming 6--12 months \fi in reasonable detail.
+      \item All research work and thesis writing must be achievable within the prescribed period of study.
+      \item \textbf{Mandatory Requirement:} Your plans must include an explicit allocation of time for writing up your thesis/portfolio --- \textbf{ideally at least 6 months}.
+    \end{itemize}
+  \end{guidance}
+}
+\expandafter\def\csname idcore@guidance@gantt-chart\endcsname{\idcore@guidance@gantt}
+
+% 7. Risk Assessment
+\newcommand{\idcore@guidance@risks}{%
+  \if@yearone
+    \begin{guidance}[Requirement: 5 key project risks]
+      Identify and evaluate the \textbf{5 key risks} to successfully completing your research project within the prescribed 3-year research window, detailing clear avoidance and mitigation plans for each.
+    \end{guidance}
+  \else
+    \begin{guidance}[Requirement: Updated Project Risk Assessment]
+      Provide an updated evaluation of project risks reflecting the current stage of your research, remaining technical obstacles, and schedule dependencies.
+    \end{guidance}
+  \fi
+}
+\expandafter\def\csname idcore@guidance@risk-assessment\endcsname{\idcore@guidance@risks}
+
+% 8. Health & Safety
+\newcommand{\idcore@guidance@hs}{%
+  \begin{guidance}[Length: Not restricted in length]
+    Detail all relevant Health \& Safety considerations for your project:
+    \begin{itemize}\setlength{\itemsep}{1pt}
+      \item Company-specific workplace, lab, and offshore site visit policies.
+      \item Laboratory or test tank testing protocols (electrical safety, high pressure, heavy lifting, flume operations).
+      \item Lone working and fieldwork risk assessments.
+    \end{itemize}
+  \end{guidance}
+}
+\expandafter\def\csname idcore@guidance@health-and-safety\endcsname{\idcore@guidance@hs}
+
+% 9. RRI & Ethics
+\newcommand{\idcore@guidance@rri}{%
+  \if@yearone
+    \begin{guidance}[Length: Not restricted in length]
+      The RRI report reflects on the broader societal, environmental, ethical, and economic implications of your research.\\
+      \textbf{Key Guidance:}
+      \begin{itemize}\setlength{\itemsep}{1pt}
+        \item Address the AREA framework: \textbf{Anticipate} outcomes, \textbf{Reflect} on motivations and assumptions, \textbf{Engage} with stakeholders and industry, and \textbf{Act} accordingly.
+        \item If the RRI or Project Plan indicate ethical issues with your research, you \textbf{must} complete an additional Research Ethics and Integrity form (see Cover Sheet and School requirements at \url{http://www.eng.ed.ac.uk/research/ethics/}).
+      \end{itemize}
+    \end{guidance}
+  \else
+    \begin{guidance}[Requirement: Updated from end of Year 1]
+      Provide an updated Responsible Research and Innovation (RRI) and Ethics assessment reflecting your full project findings, stakeholder engagement, and environmental/social implications.
+    \end{guidance}
+  \fi
+}
+
+% 10. TR&I / Data Security / Data Management Plan
+\newcommand{\idcore@guidance@tri}{%
+  \if@yearone
+    \begin{guidance}[Requirement: Initial Data & Security Governance | Lighter Touch]
+      The IDCORE Industrial Advisory Board (IAB) requires all research engineers to establish strong data governance, IP protection, and research security protocols from project kick-off.\\
+      \textbf{Key Planning Areas:}
+      \begin{enumerate}\setlength{\itemsep}{1pt}
+        \item \textbf{Data Management Plan (DMP):} Types and estimated volumes of data (experimental, sensor logs, numerical simulations, CAD models); file formats; backup redundancy and storage location (company secure drives, university cloud).
+        \item \textbf{Sponsor Intellectual Property (IP) Baseline:} Agreed treatment of background IP, ownership of anticipated foreground IP, non-disclosure agreements (NDAs), and boundaries of commercial confidentiality.
+        \item \textbf{Trusted Research Screening:} Initial screening under UK Government / NPSA Trusted Research principles (\url{https://www.npsa.gov.uk/specialised-guidance/trusted-research}) regarding international collaborations, sensitive software, or external data sharing.
+      \end{enumerate}
+    \end{guidance}
+  \else\if@yeartwo
+    \begin{guidance}[Page Limit: 1 page only | Trusted Research Protocols]
+      \textbf{Context:} For Year 2, this provides a comprehensive assessment under the UK Government / NPSA \emph{Trusted Research and Innovation (TR\&I)} protocols (\url{https://www.npsa.gov.uk/specialised-guidance/trusted-research}).\\
+      Address the following core questions:
+      \begin{enumerate}\setlength{\itemsep}{2pt}
+        \item \textbf{Sponsor IP Policies:} A broad description of and reflection on your sponsor company's policies and procedures for securing and managing IP.
+        \item \textbf{Project IP \& Data Protection:} Describe the concrete actions you are taking in your project to protect IP and research data from both being leaked to industrial competitors and from attacks and/or theft by hostile actors.
+        \item \textbf{International Conferences \& Travel Security:} Describe what protocols you would or will use if or when attending an international conference (e.g., clean travel devices, VPNs, public Wi-Fi precautions, pre-presentation IP clearance).
+        \item \textbf{Data Management Health Check:} Brief update on project data storage, version control, and backup verification.
+      \end{enumerate}
+    \end{guidance}
+  \else
+    \begin{guidance}[Requirement: Final Phase TR&I, Handover & Archival | Lighter Touch]
+      The IDCORE Industrial Advisory Board (IAB) requires all completing research engineers to establish clear IP protection for thesis submission, formal sponsor clearance, and research data archiving.\\
+      \textbf{Key Focus Areas:}
+      \begin{enumerate}\setlength{\itemsep}{1pt}
+        \item \textbf{Thesis Confidentiality \& IP Protection:} Strategy for protecting sensitive company data within the thesis (e.g., non-dimensionalising variables, redaction of specific chapters/appendices, or requesting a formal University/British Library embargo of up to 5 years).
+        \item \textbf{Sponsor IP Clearance Protocols:} Timeline for providing thesis and paper drafts to the industrial supervisor and company line management for review and written sign-off prior to formal submission.
+        \item \textbf{Data Handover \& Long-Term Archiving:} Protocols for handing over clean models, code repositories, simulation databases, and experimental raw data to the sponsor company, alongside deposit of non-confidential data in university open repositories in compliance with funder open research mandates.
+      \end{enumerate}
+    \end{guidance}
+  \fi\fi
+}
+\expandafter\def\csname idcore@guidance@data-security\endcsname{\idcore@guidance@tri}
+\expandafter\def\csname idcore@guidance@data-plan\endcsname{\idcore@guidance@tri}
+
+% Convenience Shorthand Aliases
+\newcommand{\guidancelitreview}{\printguidance{litreview}}
+\newcommand{\guidanceprogress}{\printguidance{progress}}
+\newcommand{\guidanceprojectplan}{\printguidance{projectplan}}
+\newcommand{\guidanceimpact}{\printguidance{impact}}
+\newcommand{\guidancereferences}{\printguidance{references}}
+\newcommand{\guidancegantt}{\printguidance{gantt}}
+\newcommand{\guidancerisks}{\printguidance{risks}}
+\newcommand{\guidancehs}{\printguidance{hs}}
+\newcommand{\guidancerri}{\printguidance{rri}}
+\newcommand{\guidancetri}{\printguidance{tri}}
+
+% -----------------------------------------------------------------------------
 % Header & Footer Style (Martian Report Inspired)
 % -----------------------------------------------------------------------------
 \pagestyle{fancy}

@@ -9,6 +9,8 @@
 %
 %   To suppress the guidance callout boxes in your final PDF:
 %     \documentclass[year1, hideguidance]{idcore-ar}
+%
+%   Guidance is centralised in idcore-ar.cls and rendered via \printguidance{key}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[year1]{idcore-ar}
@@ -64,15 +66,7 @@
 % 1. Literature Review
 % =============================================================================
 \section{Literature Review}
-
-\begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
-\textbf{Purpose:} Critical review of current literature and state of the art.\\
-\begin{itemize}\setlength{\itemsep}{1pt}
-  \item Write for a technical, but non-specialist reader.
-  \item Establish where current knowledge ends and where your research question begins.
-  \item Maintain consistent Harvard referencing throughout (e.g., \citet{smith2024tidal}).
-\end{itemize}
-\end{guidance}
+\printguidance{literature-review}
 
 [Enter your Literature Review here. Maintain maximum 3 pages.]
 
@@ -81,17 +75,7 @@
 % 2. Project Plan
 % =============================================================================
 \section{Project Plan}
-
-\begin{guidance}[Page Limit: 3 pages only | Minimum 11pt font]
-\textbf{Purpose:} Define your research strategy for the remaining 3 years of the EngD.\\
-Address:
-\begin{enumerate}\setlength{\itemsep}{1pt}
-  \item What do you plan to do and why? (Aims, novelty, deliverables).
-  \item How will you achieve this? (Measurable objectives and stages).
-  \item What resources are required? (Facilities, HPC, data sets, consumables).
-  \item Risks to successful completion and mitigation plans.
-\end{enumerate}
-\end{guidance}
+\printguidance{project-plan}
 
 \subsection{Contribution to Knowledge and Project Aims}
 [State your anticipated novelty, tangible deliverables, alignment with UK Net Zero targets, and primary Aims.]
@@ -111,10 +95,7 @@ Address:
 % =============================================================================
 \newpage
 \section{References}
-
-\begin{guidance}[Page Limit: 1 page only]
-All IDCORE students must use the \textbf{Harvard Referencing Style} (author-date format).
-\end{guidance}
+\printguidance{references}
 
 \bibliographystyle{abbrvnat}
 \bibliography{references}
@@ -125,17 +106,12 @@ All IDCORE students must use the \textbf{Harvard Referencing Style} (author-date
 % =============================================================================
 \newpage
 \section{Gantt Chart \& Diagrammatic Work Plan}
-
-\begin{guidance}[Page Limit: 1 page only]
-Include a diagrammatic work plan (Gantt chart) on this dedicated page:
-\begin{itemize}\setlength{\itemsep}{1pt}
-  \item Show Year 1 / upcoming 12 months in reasonable detail.
-  \item \textbf{Mandatory Requirement:} Your plans must include an explicit allocation of time for writing up your thesis/portfolio --- \textbf{ideally at least 6 months}.
-\end{itemize}
-\end{guidance}
+\printguidance{gantt-chart}
 
 \begin{center}
   \vspace{1cm}
+  % Insert your Gantt Chart figure here, e.g.:
+  % \includegraphics[width=0.95\linewidth]{figures/gantt_chart.pdf}
   \fbox{\parbox[c][12cm][c]{0.9\linewidth}{\centering\large\color{idcoregray}\textbf{[Insert 1-Page Gantt Chart Here]}\\
   \vspace{4mm}
   \small Must include Year 1 detail and at least 6 months reserved for thesis write-up.}}
@@ -147,10 +123,7 @@ Include a diagrammatic work plan (Gantt chart) on this dedicated page:
 % =============================================================================
 \newpage
 \section{Project Risk Assessment}
-
-\begin{guidance}[Requirement: 5 key project risks]
-Identify and evaluate the \textbf{5 key risks} to successfully completing your research project within the prescribed 3-year research window.
-\end{guidance}
+\printguidance{risk-assessment}
 
 \begin{table}[htbp]
 \centering
@@ -174,10 +147,7 @@ Identify and evaluate the \textbf{5 key risks} to successfully completing your r
 % 6. Health \& Safety Assessment
 % =============================================================================
 \section{Health \& Safety Assessment}
-
-\begin{guidance}[Length: Not restricted in length]
-Detail all relevant Health \& Safety considerations for your project: laboratory safety, testing protocols, and company workplace risk assessments.
-\end{guidance}
+\printguidance{health-and-safety}
 
 [Detail your project's Health \& Safety assessment here.]
 
@@ -186,10 +156,7 @@ Detail all relevant Health \& Safety considerations for your project: laboratory
 % 7. Responsible Research and Innovation (RRI) Report
 % =============================================================================
 \section{Responsible Research and Innovation (RRI) Report}
-
-\begin{guidance}[Length: Not restricted in length]
-The RRI report reflects on the broader societal, environmental, ethical, and economic implications of your research using the AREA framework (Anticipate, Reflect, Engage, Act).
-\end{guidance}
+\printguidance{rri}
 
 [Detail your RRI reflection and assessment here.]
 
@@ -199,16 +166,7 @@ The RRI report reflects on the broader societal, environmental, ethical, and eco
 % =============================================================================
 \newpage
 \section{Trusted Research \& Innovation (TR\&I) and Data Management Plan}
-
-\begin{guidance}[Requirement: Initial Data & Security Governance | Lighter Touch]
-The IDCORE Industrial Advisory Board (IAB) requires all research engineers to establish strong data governance, IP protection, and research security protocols from project kick-off.\\
-\textbf{Key Planning Areas:}
-\begin{enumerate}\setlength{\itemsep}{1pt}
-  \item \textbf{Data Management Plan (DMP):} Types and estimated volumes of data (experimental, sensor logs, numerical simulations, CAD models); file formats; backup redundancy and storage location (company secure drives, university cloud).
-  \item \textbf{Sponsor Intellectual Property (IP) Baseline:} Agreed treatment of background IP, ownership of anticipated foreground IP, non-disclosure agreements (NDAs), and boundaries of commercial confidentiality.
-  \item \textbf{Trusted Research Screening:} Initial screening under UK Government / NPSA Trusted Research principles (\url{https://www.npsa.gov.uk/specialised-guidance/trusted-research}) regarding international collaborations, sensitive software, or external data sharing.
-\end{enumerate}
-\end{guidance}
+\printguidance{tri}
 
 \subsection{Data Management Plan (DMP) and Storage Architecture}
 [Describe datasets to be generated, storage locations, backup mechanisms, and data organisation.]
