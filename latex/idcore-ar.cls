@@ -453,7 +453,7 @@
 \renewcommand{\headrule}{\hbox to\headwidth{\color{idcoreblue!60!black}\leaders\hrule height \headrulewidth\hfill}}
 \renewcommand{\footrule}{\hbox to\headwidth{\color{idcoregray!40!white}\leaders\hrule height \footrulewidth\hfill}}
 
-\fancyhead[L]{\footnotesize\color{idcoregray}\textbf{\@title}}
+\fancyhead[L]{\footnotesize\color{idcoregray}\textbf{{\let\\=\space\@title}}}
 \fancyhead[R]{\footnotesize\color{idcoregray}\@author\ (\@studentnumber)}
 
 \fancyfoot[L]{\footnotesize\color{idcoregray}IDCORE EngD --- Year \idcore@year}
