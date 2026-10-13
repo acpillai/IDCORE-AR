@@ -90,7 +90,7 @@
 % Section headings styling
 \titleformat{\section}
   {\normalfont\Large\bfseries\color{idcoreblue}}
-  {\thesection}{1em}{}[\vspace{1pt}\color{idcoreblue}\rule{\linewidth}{1.2pt}]
+  {\thesection}{1em}{}[\vspace{-16pt}\color{idcoreblue}\rule{\linewidth}{1.2pt}]
 
 \titleformat{\subsection}
   {\normalfont\large\bfseries\color{idcoreblue!90!black}}
@@ -170,9 +170,9 @@
 
 % Default titles based on year
 \if@yearone
-  \title{IDCORE Project Plan Review}
+  \title{IDCORE \\Project Plan Review}
 \else
-  \title{IDCORE Annual Progress Review}
+  \title{IDCORE \\Annual Progress Review}
 \fi
 
 % -----------------------------------------------------------------------------
